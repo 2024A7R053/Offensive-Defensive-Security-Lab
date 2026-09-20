@@ -39,7 +39,7 @@ ifconfig
 ping 192.168.122.129
 ```
 
-![Step 1 Screenshot](images/step-1.jpg)
+![Step 1 Screenshot](images/step_1.jpg)
 
 ---
 
@@ -60,7 +60,7 @@ nmap 192.168.122.129
 
 The scan helps identify available services, including FTP, which will be used for traffic analysis.
 
-![Step 2 Screenshot](images/step-2.jpg)
+![Step 2 Screenshot](images/step_2.jpg)
 
 ---
 
@@ -80,7 +80,7 @@ Start capturing network traffic between Kali Linux and the Metasploitable machin
 
 The filter helps limit the captured packets to communication involving the target IP address.
 
-![Step 3 Screenshot](images/step-3.jpg)
+![Step 3 Screenshot](images/step_3.jpg)
 
 ---
 
@@ -100,18 +100,8 @@ curl http://192.168.122.129
 ftp 192.168.122.129
 ```
 
-Log in to the FTP service using the available credentials in the lab environment.
 
-Example:
-
-```text
-Username: msfadmin
-Password: msfadmin
-```
-
-The generated traffic is captured by Wireshark for further analysis.
-
-![Step 4 Screenshot](images/step-4(a).jpg/step-4(b).jpg)
+![Step 4 Screenshot](images/step_4.jpg)
 
 ---
 
@@ -121,36 +111,23 @@ Open Wireshark and examine the captured packets.
 
 Use the following display filter to identify FTP traffic:
 
-```text
-ftp
-```
-
 Locate the FTP packets generated during the login session.
 
 Select an FTP packet and use the **Follow → TCP Stream** option to reconstruct the communication between the FTP client and server.
 
 This helps in examining the commands and responses exchanged during the FTP session.
 
-![Step 5 Screenshot](images/step-5.jpg)
+![Step 5 Screenshot](images/step_5.jpg)
 
 ---
 
 ### Step 6: Analyze the TCP Stream and Identify Cleartext Credentials
 
-Examine the reconstructed TCP stream in Wireshark.
+Examine the followed TCP stream to Observe the FTP commands and server responses transmitted during the login process, including the credentials
+transmitted in cleartext:
 
-Observe the FTP commands and server responses transmitted during the login process, including:
 
-- `USER` — Specifies the FTP username.
-- `PASS` — Transmits the FTP password.
-- `230 Login successful` — Indicates successful authentication.
-- Other FTP commands and responses exchanged during the session.
-
-Since traditional FTP does not encrypt the login communication, the username and password may be visible in the captured TCP stream.
-
-This demonstrates the security risks associated with transmitting sensitive information over unencrypted protocols.
-
-![Step 6 Screenshot](images/step-6.jpg)
+![Step 6 Screenshot](images/step_6.jpg)
 
 ---
 
