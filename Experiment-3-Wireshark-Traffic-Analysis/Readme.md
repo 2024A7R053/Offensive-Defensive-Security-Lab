@@ -101,7 +101,9 @@ ftp 192.168.122.129
 ```
 
 
-![Step 4 Screenshot](images/step-4.jpg)
+![Step 4(a) Screenshot](images/step-4(a).jpg)
+
+![Step 4(b) Screenshot](images/step-4(b).jpg)
 
 ---
 
