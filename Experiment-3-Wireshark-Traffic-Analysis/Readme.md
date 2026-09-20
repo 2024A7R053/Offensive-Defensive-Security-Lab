@@ -39,7 +39,7 @@ ifconfig
 ping 192.168.122.129
 ```
 
-![Step 1 Screenshot](images/step_1.jpg)
+![Step 1 Screenshot](images/step-1.jpg)
 
 ---
 
@@ -60,7 +60,7 @@ nmap 192.168.122.129
 
 The scan helps identify available services, including FTP, which will be used for traffic analysis.
 
-![Step 2 Screenshot](images/step_2.jpg)
+![Step 2 Screenshot](images/step-2.jpg)
 
 ---
 
@@ -80,7 +80,7 @@ Start capturing network traffic between Kali Linux and the Metasploitable machin
 
 The filter helps limit the captured packets to communication involving the target IP address.
 
-![Step 3 Screenshot](images/step_3.jpg)
+![Step 3 Screenshot](images/step-3.jpg)
 
 ---
 
@@ -111,7 +111,7 @@ Password: msfadmin
 
 The generated traffic is captured by Wireshark for further analysis.
 
-![Step 4 Screenshot](images/step_4.jpg)
+![Step 4 Screenshot](images/step-4(a).jpg/step-4(b).jpg)
 
 ---
 
@@ -131,7 +131,7 @@ Select an FTP packet and use the **Follow → TCP Stream** option to reconstruct
 
 This helps in examining the commands and responses exchanged during the FTP session.
 
-![Step 5 Screenshot](images/step_5.jpg)
+![Step 5 Screenshot](images/step-5.jpg)
 
 ---
 
@@ -150,7 +150,7 @@ Since traditional FTP does not encrypt the login communication, the username and
 
 This demonstrates the security risks associated with transmitting sensitive information over unencrypted protocols.
 
-![Step 6 Screenshot](images/step_6.jpg)
+![Step 6 Screenshot](images/step-6.jpg)
 
 ---
 
