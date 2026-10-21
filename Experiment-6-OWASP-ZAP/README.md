@@ -19,8 +19,8 @@ ip a
 ifconfig
 ```
 
-![Step 1 Screenshot](images/ss1.1.png)
-![Step 1 Screenshot](images/ss1.2.png)
+![Step 1 Screenshot](images/ss1.1.jpg.png)
+![Step 1 Screenshot](images/ss1.2.jpg.png)
 
 ### Step 2: Test Network Connectivity
 
@@ -31,7 +31,7 @@ From Kali Linux, ping the Metasploitable IP address to verify that the target ma
 ping 192.168.122.129 -c 4
 ```
 
-![Step 2 Screenshot](images/ss2.png)
+![Step 2 Screenshot](images/ss2.jpg.png)
 
 ### Step 3: Access DVWA and Configure Its Security Level
 
@@ -39,7 +39,7 @@ Open the web browser in Kali Linux and access the Damn Vulnerable Web Applicatio
 
 Target URL: `http://192.168.122.129/dvwa/`
 
-![Step 3 Screenshot](images/ss3.png)
+![Step 3 Screenshot](images/ss3.jpg.png)
 
 ### Step 4: Launch the OWASP ZAP Automated Scan
 
@@ -47,19 +47,19 @@ Launch OWASP ZAP and select **Automated Scan** from the Quick Start page. Enter 
 
 Target URL: `http://192.168.122.129/dvwa/`
 
-![Step 4 Screenshot](images/ss4.png)
+![Step 4 Screenshot](images/ss4.jpg.png)
 
 ### Step 5: Identify the Detected Vulnerabilities
 
 After the scan generates findings, open the **Alerts** tab in OWASP ZAP. Examine the detected vulnerabilities and their risk levels to understand the potential security weaknesses in the application.
 
-![Step 5 Screenshot](images/ss5.png)
+![Step 5 Screenshot](images/ss5.jpg.png)
 
 ### Step 6: Examine Vulnerability Details and Generate the Report
 
 Select a detected vulnerability in OWASP ZAP to inspect its description, evidence, and potential impact. Use the reporting feature to generate an HTML report or another available report format documenting the scan results.
 
-![Step 6 Screenshot](images/ss6.png)
+![Step 6 Screenshot](images/ss6.jpg.png)
 
 ## Result
 
