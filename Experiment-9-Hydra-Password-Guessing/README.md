@@ -15,7 +15,7 @@ Use Nmap on Kali Linux to scan the target machine and identify its open ports an
 nmap -sV <Target-IP>
 ```
 
-![Screenshot 1](images/ss1.png)
+![Screenshot 1](outputs/ss1(1).png)
 
 ### Step 2: Prepare Username and Password Wordlists
 
@@ -39,7 +39,7 @@ hydra -L users.txt -P passwords.txt ssh://<Target-IP>
 
 The initial attempt encountered an SSH MAC algorithm compatibility error between the client and server.
 
-![Screenshot 2](images/ss2.png)
+![Screenshot 2](outputs/ss2(1).png)
 
 ### Step 3: Resolve the SSH Compatibility Issue
 
@@ -57,7 +57,7 @@ Save the required configuration changes and retry the Hydra attack using the spe
 hydra -l msfadmin -P passwords.txt -t 4 ssh://<Target-IP>
 ```
 
-![Screenshot 3](images/ss3.png)
+![Screenshot 3](outputs/ss3(1).png)
 
 ## 3. Result
 
